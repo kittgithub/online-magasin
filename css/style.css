@@ -1,20 +1,25 @@
-*{margin:0;padding:0;box-sizing: border-box;}
+/* Generelle reset-regler for alle elementer */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-body{
+/* Styling af tekst i dokumentets body-element */
+body {
     font-family: 'Roboto', sans-serif;
 }
 
-nav{
-
+/* Styling af navigationssektionen ift. baggrundsfarve og placering på websiden */
+nav {
     background-color: white;
-    grid-row: 1/2;
-    
+    grid-row: 1/2; 
     margin-left: 100px;
     margin-top: 20px;
     padding: 15px;
-    
 }
 
+/* Styling af unordered-list-elementet inde i navigationssektionen, ift. samlet opsætning og teksten */
 nav ul {
     display: flex;
     gap: 40px;
@@ -28,41 +33,37 @@ nav ul {
     align-items: center;
 }
 
-.søg img{
-
+/* Søgeikonets placering og størrelse */
+.søg img {
     padding-left: 50px;
     width: 40%;
 }
 
-nav ul li{
-   text-decoration: none;
+/* Styling af links i navigationssektionen */
+nav ul li a {
+    text-decoration: none;
+    color: #053b3b;
 }
-nav ul li a{
-    text-decoration: none;
-    color: #053b3b
- }
 
-nav ul li a:hover{
-    text-decoration: none;
-    color:#ff5715;
+/* Hover-effekt på menupunkterne i navigationssektionen */
+nav ul li a:hover {
+    color: #ff5715;
     padding-bottom: 4px;
 }
 
-.hero{
-
+/* Styling af hero-sektionens størrelse og placering inkl. hero-billedet */
+.hero {
     height: 100vh;
     width: 100%;
-
     display: grid;
     grid-template-columns: 200px 500px 200px;
-    grid-template-rows: 100px 500px;   
-  
-
-    background-image: url(../img/studiokay_hero.png);
+    grid-template-rows: 100px 500px;
+    background-image: url(../img/studiokay_hero.webp);
     background-position: center;
     margin-top: 10px;
 }
 
+/* Styling af logoets placering i navigationen */
 li.logotop {
     width: 250%;
     height: auto;
@@ -70,62 +71,47 @@ li.logotop {
     padding-right: 2.8%;
 }
 
-/* .logo{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: white;
-} */
-
-.logotop img{
-
+/* Selve billedet i logoet øverst på siden */
+.logotop img {
     width: 100%;
-    padding: 100, 0, 0, 100;
-    
     margin-top: 30px;
 }
 
-
-
+/* Styling af spot-sektionen, inkl. anvendelse og styling af fonten Bodoni Moda samt placering af tekst */
 .spot {
-  font-family: "Bodoni Moda", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  
+    font-family: "Bodoni Moda", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-
+/* Styling og placering af sektionen kaldet spot */
 section#spot {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-  
 }
 
-.spot h1{
-
+/* Styling af overskriften i spot-sektionen */
+.spot h1 {
     font-size: 1.5em;
     padding-top: 100px;
-
-    color:#053b3b;
-
+    color: #053b3b;
 }
 
+/* Styling af brødtekst i spot-sektionen */
 p {
     padding-top: 60px;
     font-size: 0.8em;
 }
 
-
+/* Styling pg placering af artikelindholdet i spot-sektionen */
 article#spot-artikel {
-
     font-size: 1.5em;
     color: #053b3b;
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -133,214 +119,211 @@ article#spot-artikel {
     padding-left: 8%;
 }
 
+/* Styling ift. størrelse og placering af Call-to-Action-knapper */
 .cta {
-    
-    
-    background-color:#053b3b;
+    background-color: #053b3b;
     height: 50px;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     margin: 20px 20px;
-    
 }
 
-.cta:hover{
+/* Styling af hover-effekten på Call-to-Action-knapper */
+.cta:hover {
     background-color: #ff5715;
     color: white;
 }
 
+/* Placering af billede i spot-sektionen */
 article#spot-img {
     padding-left: 10%;
 }
 
-img.genbrug-img {
+/* Størrelse af billedet */
+img.indretning-img {
     width: 70%;
 }
 
-
-.artikelitems{
-
+/* Placering mv. samt overordnet styling ift. sektionen med magasinets seneste artikler, bl.a. at baggrundsfarven her er orange */
+.artikelitems {
     height: 100vh;
     width: 100%;
-
-    font-family: 'Besley', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-
-    background-color:#ff5715;
+    background-color: #ff5715;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr 1fr 1fr;
-
 }
-.artikelitems h2{
+
+/* Styling og placering af overskrift i artikelsektionen */
+.artikelitems h2 {
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
     color: #053b3b;
     font-size: 2em;
-
-    
 }
-.artikelitems h2 a{
-    color:#053b3b;
+
+/* Styling af hover-effekt på linket til at finde alle artikler i magasinet */
+.artikelitems h2 a {
+    color: #053b3b;
     margin-top: 60px;
-
 }
 
-.artikel{
-  
+/* Styling ift. placering af de tre bokse med artikler */
+.artikel {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     padding: 0 100px;
-
 }
-.item{
+
+/* Baggrundsfarve på de tre bokse med artikler */
+.item {
     background-color: white;
 }
-.itemimg{
+
+/* Styling ift. billedrammerne i de tre bokse med artikler */
+.itemimg {
     width: 100%;
     height: 200px;
-
-    
 }
-.itemimg img{
-    width: 70%;
+
+/* Styling af de anvendte billeder i de tre bokse med artikler, så størrelse og placering er som ønsket */
+.itemimg img {
+    width: 67%;
     max-height: 100%;
     padding-bottom: 65px;
     padding-left: 90px;
-    
     object-fit: cover;
     object-position: center;
-    
 }
-.itemtext{
-    height: 200px;
-    padding:20px;
+
+/* Styling af tekstelementerne i de tre bokse med artikler */
+.itemtext {
+    height: 150px;
+    padding: 40px;
+    color: #053b3b;
 }
-.itemtext h4{
-   font-weight: 800;
-   margin-bottom: 10px;
-   font-size: 1.5em;
+
+/* Styling af font i overskrifterne i de tre bokse med artikler */
+.itemtext h4 {
+    font-weight: 800;
+    margin-bottom: 40px;
+    font-size: 1.5em;
 }
-.itemtext p{
-    font-weight: 100;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
- }
 
 
-.cta{
-    background-color:#053b3b;
+/* Styling og placering a Call-to-Action-knapper i de tre bokse med artikler */
+.cta {
+    background-color: #053b3b;
     height: 50px;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     margin: 20px 20px;
-   
-
 }
-.cta:hover{
+
+/* Styling af hover-effekten på Call-to-Action-knapperne */
+.cta:hover {
     background-color: #ff5715;
     color: white;
 }
-.content{
 
+/* Styling ift. placering og størrelse på den samlede sektion kaldet content */
+.content {
     width: 100%;
     height: 80vh;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px auto auto;
-
 }
 
-
-.content1{
+/* Styling ift. placering og størrelse på den første artikelboks i content-sektionen */
+.content1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 50px;
-
     height: 70vh;
-
-
-    
 }
-.content1text{
+
+/* Styling ift. placering af tekst til den første artikel i content-sektionen */
+.content1text {
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: right;
-   
-
     padding-top: 100px;
 }
 
-.content1text h3{
+/* Styling ift. farve og størrelse af tekst/overskrift til den første artikel i content-sektionen */
+.content1text h3 {
     font-weight: 900;
     font-size: 3em;
-   
-
+    color: #053b3b;
 }
 
-.content1 img{
+/* Styling ift. størrelse og placering af billedet til den første artikel i content-sektionen */
+.content1 img {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 100%;
 }
-.content2{
+
+/* Styling ift. placering og størrelse på den anden artikelboks i content-sektionen */
+.content2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 50px;
-
     height: 70vh;
     margin-top: 60px;
-
-   
 }
-.content2text{
+
+/* Styling ift. placering af tekst til den anden artikel i content-sektionen */
+.content2text {
     grid-column: 2/3;
     grid-row: 1/2;
     text-align: left;
-
     padding-top: 100px;
 }
 
-.content2text h3{
+/* Styling ift. farve og størrelse af tekst/overskrift til den anden artikel i content-sektionen */
+.content2text h3 {
     font-weight: 900;
     font-size: 3em;
-   
-
+    color: #053b3b;
 }
 
-.content2 img{
+/* Styling ift. størrelse og placering af billedet til den anden artikel i content-sektionen */
+.content2 img {
     grid-column: 1/2;
     grid-row: 1/2;
     width: 100%;
 }
 
+/* Styling af websidens footer-sektion ift. størrelse og placeringsregler */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 20vh;
-
-    
 }
 
+/* Styling ift. størrelse og placering af logo i footer-sektionen */
 .logofooter img {
+    margin-left: 120px;
     padding: 20px;
     width: 35%;
 }
 
+/* Styling ift. placering, skrifttype og -størrelse samt farve på tekstelementerne i footer-sektionen */
 .om,
 .skribent,
 .adresse {
@@ -348,10 +331,14 @@ img.genbrug-img {
     font-weight: 100;
     color: #053b3b;
     text-align: center;
+    margin-left: -440px;
 }
 
+/* Styling ift. størrelsen på billedet med SoMe-ikoner i footer-sektionen */
 .some {
-    scale: 50%; 
+    transform: scale(0.5);
 }
+
+
 
 

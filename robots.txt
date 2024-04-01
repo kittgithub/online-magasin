@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /private/  # Disallowing crawling of the /private/ directory
+Disallow: /admin/    # Disallowing crawling of the /admin/ directory
+
+User-agent: Googlebot
+Allow: /            # Allowing crawling of the entire site for Googlebot
+
+Sitemap: http://onlinemagasin.studiogrund.dk/sitemap.xml
